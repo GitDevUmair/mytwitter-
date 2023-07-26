@@ -21,7 +21,7 @@ const Newsfeed = () => {
   const getNewsfeed = async (output) => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/newsfeed/getnewsfeed",
+        "/api/newsfeed/getnewsfeed",
         {
           method: "GET",
           headers: {
@@ -42,7 +42,7 @@ const Newsfeed = () => {
       const data = {};
       data.id = id;
       const response = await fetch(
-        "http://localhost:5000/api/auth/getposterdetail",
+        "/api/auth/getposterdetail",
         {
           method: "POST",
           headers: {

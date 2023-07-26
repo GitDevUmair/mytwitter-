@@ -20,7 +20,7 @@ const Followers = () => {
  
     const getFollowers=async(output)=>{
         try {
-          const response = await fetch("http://localhost:5000/api/profile/followers", {
+          const response = await fetch("/api/profile/followers", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -40,7 +40,7 @@ const Followers = () => {
         try {
           const data = {}
           data.id=id
-          const response = await fetch("http://localhost:5000/api/auth/getposterdetail", {
+          const response = await fetch("/api/auth/getposterdetail", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

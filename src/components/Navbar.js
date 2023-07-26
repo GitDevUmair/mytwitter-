@@ -37,7 +37,7 @@ const Navbar = () => {
   const getFollowings = async (output) => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/profile/following",
+        "/api/profile/following",
         {
           method: "POST",
           headers: {
@@ -59,7 +59,7 @@ const Navbar = () => {
     let mytoken = getToken();
     try {
       const response = await fetch(
-        `http://localhost:5000/api/relationship/follow/${id}`,
+        `/api/relationship/follow/${id}`,
         {
           method: "POST",
           headers: {
@@ -91,7 +91,7 @@ const Navbar = () => {
     setShow(false);
     try {
       const response = await fetch(
-        `http://localhost:5000/api/relationship/unfollow/${id}`,
+        `/api/relationship/unfollow/${id}`,
         {
           method: "POST",
           headers: {
@@ -124,7 +124,7 @@ const Navbar = () => {
       setShow(true);
       try {
         const response = await fetch(
-          `http://localhost:5000/api/searchusers?searchquery=${search}`,
+          `/api/searchusers?searchquery=${search}`,
           {
             method: "POST",
             headers: {

@@ -20,10 +20,11 @@ const Signup = () => {
     console.log(credentials);
   };
   const handleSubmit = async (e) => {
+    //http://localhost:5000
     e.preventDefault();
     if (credentials.password === credentials.cpassword) {
       const response = await fetch(
-        "http://localhost:5000/api/auth/createuser",
+        "/api/auth/createuser",
         {
           method: "POST",
           headers: {

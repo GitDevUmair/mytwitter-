@@ -34,7 +34,7 @@ const Mytweets = () => {
     let token = getToken();
     try {
       const response = await fetch(
-        `http://localhost:5000/api/tweets/deletetweet/${id}`,
+        `/api/tweets/deletetweet/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -63,7 +63,7 @@ const Mytweets = () => {
     };
     try {
       const response = await fetch(
-        "http://localhost:5000/api/tweets/addtweet",
+        "/api/tweets/addtweet",
         {
           method: "POST",
           headers: {
@@ -97,7 +97,7 @@ const Mytweets = () => {
   const gettweets = async (output) => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/tweets/gettweets",
+        "/api/tweets/gettweets",
         {
           method: "GET",
           headers: {

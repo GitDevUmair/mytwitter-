@@ -3,8 +3,9 @@ const express = require("express");
 var cors = require("cors");
 const path = require("path");
 connectToMongo();
+require('dotenv').config()
 const app = express();
-const port = 5000;
+const PORT = process.env.port  ||  5000;
 
 app.use(cors());
 app.use(express.json());
@@ -21,6 +22,6 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "..build/index.html"));
 });
 
-app.listen(port, () => {
-  console.log(`Twitter backend listening at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Twitter backend listening at http://localhost:${PORT}`);
 });
